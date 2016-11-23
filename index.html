@@ -170,8 +170,8 @@
                         os gestores e pesquisadores podem usar o acaso como importante contribuição para o sucesso competitivo
                         de um projeto.” - <em>Serendip DevOps</em></p>
                 </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <form class="form-horizontal" action="https://script.google.com/macros/s/AKfycbxjn7P9CT0pQAICm1Qh6VM6ZkrKnxvvCHoUGGykVlDz8gTyZQcB/exec" method="post" data-toggle="validator" role="form">
+                <div class="col-lg-8 col-lg-offset-2 text-center">                    
+                    <form class="form-horizontal" action="https://script.google.com/macros/s/AKfycbxjn7P9CT0pQAICm1Qh6VM6ZkrKnxvvCHoUGGykVlDz8gTyZQcB/exec" method="post" id="gform" data-toggle="validator" role="form">
                         <fieldset>
                             <!-- Name input-->
                             <div class="form-group">
@@ -184,7 +184,7 @@
                             <div class="form-group">
                                 <label class="col-md-3 control-label" for="email">E-mail:</label>
                                 <div class="col-md-9">
-                                    <input id="email" name="email" type="email" placeholder="E-mail válido" class="form-control" required>
+                                    <input id="email" name="email" type="email" placeholder="E-mail válido" class="form-control" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$" required>
                                 </div>
                             </div>
                             <!-- Message body -->
@@ -199,9 +199,13 @@
                                 <div class="col-md-12 text-right">
                                     <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
                                 </div>
-                            </div>
+                            </div>                        
                         </fieldset>
                     </form>
+                    <div style="display:none;" id="thankyou_message">
+                        <hr class="primary">
+                    <p>Grato! - <em>Serendip DevOps</em></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -215,7 +219,8 @@
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!-- Theme JavaScript -->
-    <script src="js/creative.js"></script>    
+    <script src="js/creative.js"></script>
+    <script data-cfasync="false" src="js/form-submission-handler.js"></script>   
 </body>
 
 </html>
