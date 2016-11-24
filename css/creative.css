@@ -418,3 +418,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+
+footer {
+padding: 10px 0;
+background: black;
+color: white;
+}
