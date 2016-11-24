@@ -198,12 +198,21 @@
                                     <textarea class="form-control" id="message" name="message" placeholder="Sua breve mensagem" rows="5" required></textarea>
                                 </div>
                             </div>
+                            <!-- Math input-->
+                            <div class="form-group">
+                                <div>                                
+                                <label class="col-md-3 control-label" id="problem" for="answer"></label>
+                                </div>                                
+                                <div class="col-md-9">
+                                    <input id="answer" name="answer" type="text" placeholder="Você é um robô? Não, qual o resultado?" class="form-control">
+                                </div>
+                            </div>
                             <!-- Form actions -->
                             <div class="form-group">
                                 <div class="col-md-12 text-right">
-                                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                                    <button id="submit" type="submit" class="btn btn-primary btn-lg" disabled>Enviar</button>
                                 </div>
-                            </div>
+                            </div>                            
                         </fieldset>
                     </form>
                     <div style="display:none;" id="thankyou_message">
@@ -237,6 +246,7 @@
     <!-- Theme JavaScript -->
     <script src="js/creative.js"></script>
     <script data-cfasync="false" src="js/form-submission-handler.js"></script>
+    <script src="js/math-captcha.js"></script>
 </body>
 
 </html>
