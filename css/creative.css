@@ -49,8 +49,10 @@ p {
   width: 100%;
   background-position: center;
   background-image: url('../img/contact.jpg');
+  background-repeat: no-repeat;
   text-align: center;
   color: white;
+  background-color: black
 }
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
