@@ -43,6 +43,8 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   } else {
     var url = event.target.action;  //
     var xhr = new XMLHttpRequest();
+    $('#submit').attr("disabled", true);
+    $('#submit').html("Enviando...");
     xhr.open('POST', url);
     // xhr.withCredentials = true;
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
