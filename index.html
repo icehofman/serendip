@@ -18,11 +18,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
         rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic"
-        rel="stylesheet" type="text/css">
+        rel="stylesheet" type="text/css">    
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
+    <link href="css/anicollection.css"  rel="stylesheet"  type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,7 +40,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Serendip DevOps</a>
+                <a class="navbar-brand page-scroll" data-anijs="if: mouseover, do: pulse animated" href="#page-top">Serendip DevOps</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -68,6 +69,7 @@
                 <h1 id="homeHeading">Serendip DevOps</h1>
                 <hr>
                 <p>“O acaso só favorece a mente preparada” - <em>Louis Pasteur</em></p>
+                <a href="#about" class="btn btn-primary btn-lg page-scroll" data-anijs="if: click, do: bounceOutDown animated">Saiba mais</a>
             </div>
         </div>
     </header>
@@ -75,14 +77,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Nós temos tudo que seu projeto precisa!</h2>
+                    <h2 class="section-heading"><strong> Nós temos tudo que seu projeto precisa </strong></h2>
                     <hr class="light">
-                    <p class="text-faded">Somos uma consultoria em DevOps e temos um conjunto de estratégias de melhorias construídas em torno
+                    <p class="text-faded">Somos uma consultoria especializada em cultura DevOps.<br>Temos um conjunto de estratégias de melhorias construídas em torno
                         de uma simples ideia:</p>
                     <br>
-                    <p class="text-faded">Que todas as facetas da sua organização de tecnologia devem estar alinhadas em direção de um objetivo
+                    <p class="text-faded">“Que todas as facetas da sua organização de tecnologia devem estar alinhadas em direção de um objetivo
                         comum de forma rápida e confiável, nas criações de produtos e serviços baseados em software de alta
-                        qualidade e alto desempenho.</p>
+                        qualidade e de alto desempenho.”  - <em>Serendip DevOps</em></p>
                 </div>
             </div>
         </div>
@@ -91,7 +93,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Nossos princípios</h2>
+                    <h2 class="section-heading"><strong> Nossos princípios </strong></h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -100,14 +102,14 @@
             <div class="row">
                 <div class="col-lg-4 col-md-7 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-location-arrow text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-location-arrow text-primary sr-icons" data-anijs="if: mouseover, do: bounceOutUp animated, after: removeAnim"></i>
                         <h3>Guiar</h3>
                         <p class="text-muted">Guiar através da visão DevOps, da estratégia e de um roteiro, transformando isso em realidade operacional.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-7 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-dot-circle-o text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-dot-circle-o text-primary sr-icons" data-anijs="if: mouseover, do: flash animated, after: removeAnim"></i>
                         <h3>Definir</h3>
                         <p class="text-muted">Ajudar a definir um caso de negócios voltado para DevOps, que equilibra custos, riscos e agilidade
                             no seu contexto de negócios específico.</p>
@@ -115,7 +117,7 @@
                 </div>
                 <div class="col-lg-4 col-md-7 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-graduation-cap text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-graduation-cap text-primary sr-icons" data-anijs="if: mouseover, do: rotateOutUpRight animated, after: removeAnim"></i>
                         <h3>Aconselhar</h3>
                         <p class="text-muted">Aconselhar sobre o seu projeto de arquitetura, incluindo processos e ferramentas DevOps.</p>
                     </div>
@@ -126,7 +128,7 @@
                 </div>
                 <div class="col-lg-4 col-md-7 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-exchange text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-exchange text-primary sr-icons" data-anijs="if: mouseover, do: fadeOutLeft animated, after: removeAnim"></i>
                         <h3>Feedback</h3>
                         <p class="text-muted">Fornecer feedback e orientação através de DevOps, ajudando com escopo e prioridades, identificar
                             lacunas e pontos de estrangulamento e aconselhá-lo sobre as medidas adequadas.</p>
@@ -138,14 +140,14 @@
             <div class="row">
                 <div class="col-lg-4 col-md-7 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-search text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-search text-primary sr-icons" data-anijs="if: mouseover, do: bounceOut animated, after: removeAnim"></i>
                         <h3>Avaliar</h3>
                         <p class="text-muted">Ajudar a avaliar seus níveis de maturidade no conjunto de ferramentas de automação e de entrega contínua.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-7 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-compress text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-compress text-primary sr-icons" data-anijs="if: mouseover, do: rubberBand animated, after: removeAnim"></i>
                         <h3>Identificar</h3>
                         <p class="text-muted">Ajudar a identificar as métricas e indicadores de desempenho para melhorar o alinhamento e acelerar
                             o fluxo de informações entre o desenvolvimento e a operação, e definir o foco na agilidade e
@@ -154,7 +156,7 @@
                 </div>
                 <div class="col-lg-4 col-md-7 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-leaf text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-leaf text-primary sr-icons" data-anijs="if: mouseover, do: rotateOutDownLeft animated, after: removeAnim"></i>
                         <h3>Cultivar</h3>
                         <p class="text-muted">Ajudar a cultivar a mudança organizacional e cultural necessário para uma metodologia de desenvolvimento
                             ágil.
@@ -168,7 +170,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Vamos conversar!</h2>
+                    <h2 class="section-heading"><strong> Entre em contato conosco </strong></h2>
                     <hr class="primary">
                     <p>“Pode se constituir numa ferramenta poderosa na contribuição de percepções inovadoras que conduzem à
                         realização de visões empreendedoras. Ao entender o processo de seu desenvolvimento e utilização,
@@ -214,7 +216,7 @@
                             <!-- Form actions -->
                             <div class="form-group">
                                 <div class="col-md-12 text-right">
-                                    <button id="submit" type="submit" class="btn btn-primary btn-lg" disabled>Enviar</button>
+                                    <button id="submit" type="submit" class="btn btn-primary btn-lg" data-anijs="if: click, do: lightSpeedOut animated, after: removeAnim" disabled>Enviar</button>
                                 </div>
                             </div>
                         </fieldset>
@@ -248,6 +250,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!-- Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script src="js/anijs-min.js"></script>
     <script data-cfasync="false" src="js/form-submission-handler.js"></script>
     <script src="js/math-captcha.js"></script>
     <script src="js/google.js"></script>
