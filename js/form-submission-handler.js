@@ -34,6 +34,27 @@ function getFormData() {
   return data;
 }
 
+function clearForm(form) {
+  // iterate over all of the inputs for the form
+  // element that was passed in
+  $(':input', form).each(function() {
+    var type = this.type;
+    var tag = this.tagName.toLowerCase(); // normalize case
+    // it's ok to reset the value attr of text inputs,
+    // password inputs, and textareas
+    if (type == 'text' || type == 'password' || tag == 'textarea' || type == 'email')
+      this.value = "";
+    // checkboxes and radios need to have their checked state cleared
+    // but should *not* have their 'value' changed
+    else if (type == 'checkbox' || type == 'radio')
+      this.checked = false;
+    // select elements need to have their 'selectedIndex' property set to -1
+    // (this works for both single and multiple select elements)
+    else if (tag == 'select')
+      this.selectedIndex = -1;
+  });
+};
+
 function handleFormSubmit(event) {  // handles form submit withtout any jquery
   event.preventDefault();           // we are submitting via xhr below
   var data = getFormData();         // get the values submitted in the form
@@ -41,8 +62,9 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     document.getElementById('email-invalid').style.display = 'block';
     return false;
   } else {
-    var url = event.target.action;  //
+    var url = event.target.action;
     var xhr = new XMLHttpRequest();
+    //button behavior
     $('#submit').attr("disabled", true);
     $('#submit').html("Enviando...");
     xhr.open('POST', url);
@@ -59,6 +81,9 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     var encoded = Object.keys(data).map(function(k) {
         return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
     }).join('&')
+    //clear form
+    clearForm();
+    //post
     xhr.send(encoded);
   }
 }
